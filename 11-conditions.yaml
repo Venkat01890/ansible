@@ -3,8 +3,11 @@
   tasks:
   - name: check whether the user exists or not
     # when you want to run linux commands directly i.e., in the case ansible module not available
+    # when the user does not exist, ansible treating this as failure and come out by default
     ansible.builtin.command: id roboshop
     register: output # output is variable name
+    ignore_errors: true
+    
   - name: print the command output
     ansible.builtin.debug:
       msg: "output is: {{output}}"
