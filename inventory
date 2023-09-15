@@ -1,5 +1,5 @@
 [mongodb]
-roboshop-us-dev-db-mongodb-01.practicedevops.shop
+172.31.44.112
 
 [mongodb:vars]
 MONGO_USERNAME=mongodbadmin
